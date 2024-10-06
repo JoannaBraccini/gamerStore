@@ -16,9 +16,14 @@ export default function useProducts() {
   const getProductById = useCallback(async function getProductById(
     id: number
   ): Promise<Product | null> {
-    const resp = await fetch(`${baseUrl}/products/${id}`);
-    const product = await resp.json();
-    return product ?? null;
+    try {
+      const resp = await fetch(`${baseUrl}/products/${id}`);
+      const produto = await resp.json();
+      return produto ?? null;
+    } catch (error) {
+      console.error("Erro ao obter produto por id", error);
+      return null;
+    }
   }, []);
 
   useEffect(() => {
