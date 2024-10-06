@@ -1,5 +1,5 @@
 "use client";
-import { Product } from "@/core";
+import { Product } from "@gstore/core";
 import { IconShoppingCartPlus } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";

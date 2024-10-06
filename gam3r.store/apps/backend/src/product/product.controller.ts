@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
-import { Product } from 'src/core';
+import { Product } from '@gstore/core';
 import { ProductPrisma } from './product.prisma';
 
 @Controller('products')
